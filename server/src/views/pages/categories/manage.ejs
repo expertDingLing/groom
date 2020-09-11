@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../../layouts/global_style.ejs')  %>
+        <%- include('../../layouts/theme_style.ejs')  %>
+        <!-- PAGE LEVEL STYLES -->
+        <link href="/assets/pages/css/categories/manage.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid">
+
+        <%- include('../../layouts/navbar.ejs')  %>
+
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+
+            <%- include('../../layouts/sidebar.ejs')  %>
+
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <!-- BEGIN CONTENT BODY -->
+                <div class="page-content">
+                    <!-- BEGIN PAGE HEADER-->
+                    <div class="page-header">
+                        <div class="page-title">
+                            <small> <%= path %> </small>
+                            <h2> <%= title %>  </h2>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn custom btn-outline">Add Category</button>
+                            <button type="button" class="btn custom btn-outline">Add Subcategory</button>
+                            <button type="button" class="btn custom btn-outline">Delete Category</button>
+                        </div>
+                    </div>
+                    <!-- END PAGE HEADER-->
+                    <div class="category-panel">
+                        <div class="row">
+                            <div class="left col-md-3">
+                                <h3>Categories</h3>
+                                <p>Drag and drop items to sort</p>
+                                <div>
+                                    <button type="button" class="btn btn-collapse">Collapse All</button>
+                                    <button type="button" class="btn btn-expand">Expand All</button>
+                                </div>
+                                <ul>
+                                    <li>Face</li>
+                                    <li>Fitness</li>
+                                    <li>Relax</li>
+                                    <li>Body</li>
+                                    <li>Make-up</li>
+                                    <li>Nails</li>
+                                    <li>Hair</li>
+                                </ul>
+                            </div>
+                            <div class="right col-md-9">
+                                <div class="top">
+                                    <h3>'Face' category</h3>
+                                    <button type="button" class="btn btn-preview">Preview Category</button>
+                                    <ul class="nav nav-tabs">
+                                        <li class="active">
+                                            <a href="#tab_general" data-toggle="tab">General</a>
+                                        </li>
+                                        <li>
+                                            <a href="#tab_category_products" data-toggle="tab">Category Products</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="main">
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab_general">
+                                            <label for="name">Name</label>
+                                            <input type="text" class="form-control" name="name">
+                                            <label class="label-image">Category Image</label>
+                                            <img class="preview-image" src="/assets/layout/img/avatar.png" alt="" />
+                                            <button type="button" class="btn btn-delete">Delete</button>
+                                            <div class="input-container">
+                                                <p>Upload/change category image</p>
+                                                <input class="preview-image-upload" type='file'/>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="tab_category_products">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- END CONTENT BODY -->
+            </div>
+            <!-- END CONTENT -->
+        </div>
+        <!-- END CONTAINER -->
+
+        <%- include('../../layouts/global_script.ejs')  %>
+        <%- include('../../layouts/theme_script.ejs')  %>
+        <!-- PAGE LEVEL SCRIPTS -->
+        <script src="/assets/pages/scripts/categories/manage.js" type="text/javascript"></script>
+
+    </body>
+
+</html>

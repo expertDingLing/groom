@@ -1,0 +1,206 @@
+<!-- BEGIN SIDEBAR -->
+<div class="page-sidebar-wrapper">
+    <!-- END SIDEBAR -->
+    <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+    <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+    <div class="page-sidebar navbar-collapse collapse">
+        <!-- BEGIN SIDEBAR MENU -->
+        <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+        <!-- DOC: Apply "page-sidebar-menu-compact" class right after "page-sidebar-menu" to enable compact sidebar menu style -->
+        <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+        <!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+        <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+        <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+        <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+        <div class="sidebar-userinfo">
+            <h3> Welcome </h3>
+            <span> <%= session.user.username %> </span>
+            <div class="divider"></div>
+        </div>
+        <ul class="page-sidebar-menu  page-header-fixed page-sidebar-menu-compact " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+            <li class="nav-item start">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-home"></i>
+                    <span class="title">Dashboard</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item start">
+                        <a href="javascript:;" class="nav-link ">
+                            <span class="title">Analytics</span>
+                        </a>
+                    </li>
+                    <li class="nav-item start">
+                        <a href="javascript:;" class="nav-link ">
+                            <span class="title">Commerce</span>
+                        </a>
+                    </li>
+                    <li class="nav-item start">
+                        <a href="javascript:;" class="nav-link ">
+                            <span class="title">Sales</span>
+                        </a>
+                    </li>
+                    <li class="nav-item start">
+                        <a href="javascript:;" class="nav-link ">
+                            <span class="title">Minimal</span>
+                        </a>
+                    </li>
+                    <li class="nav-item start">
+                        <a href="javascript:;" class="nav-link ">
+                            <span class="title">CRM</span>
+                        </a>
+                    </li>
+                    <li class="nav-item start">
+                        <a href="javascript:;" class="nav-link ">
+                            <span class="title">Custommer Wallet</span>
+                        </a>
+                    </li>
+                    <li class="nav-item start">
+                        <a href="javascript:;" class="nav-link ">
+                            <span class="title">Coupons</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-users"></i>
+                    <span class="title">Users</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-users"></i>
+                    <span class="title">Employees</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="javascript:;" class="nav-link ">
+                            <span class="title">Clients</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:;" class="nav-link ">
+                            <span class="title">Leads</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:;" class="nav-link ">
+                            <span class="title">Tickets</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-users"></i>
+                    <span class="title">Providers</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="javascript:;" class="nav-link ">
+                            <span class="title">Service Features</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" id="sb-item-categories">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-briefcase"></i>
+                    <span class="title">Categories</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item" id="sb-item-categories-manage">
+                        <a href="/categories/manage" class="nav-link ">
+                            <span class="title">Manage Categories</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-basket"></i>
+                    <span class="title">Shops</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-feed"></i>
+                    <span class="title">Services</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-bulb"></i>
+                    <span class="title">Appointments</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-layers"></i>
+                    <span class="title">CMS Pages</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li class="nav-item" id="sb-item-locations">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-pointer"></i>
+                    <span class="title">Locations</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item" id="sb-item-locations-states">
+                        <a href="/locations/states" class="nav-link ">
+                            <span class="title">States</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" id="sb-item-locations-cities">
+                        <a href="/locations/cities" class="nav-link ">
+                            <span class="title">Cities</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" id="sb-item-locations-location406">
+                        <a href="/locations/location406" class="nav-link">
+                            <span class="title">Locations (406)</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link">
+                    <i class="icon-docs"></i>
+                    <span class="title">Documents</span>
+                </a>
+            </li>
+            <li class="nav-item" id="sb-item-booking">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-wallet"></i>
+                    <span class="title">Booking</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item" id="sb-item-booking-overview">
+                        <a href="/booking/overview" class="nav-link ">
+                            <span class="title">Overview</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" id="sb-item-booking-listing">
+                        <a href="/booking/listing" class="nav-link ">
+                            <span class="title">Listing</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!-- END SIDEBAR MENU -->
+    </div>
+    <!-- END SIDEBAR -->
+</div>
+<!-- END SIDEBAR -->

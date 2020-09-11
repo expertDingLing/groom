@@ -1,0 +1,144 @@
+.page-header {
+    border-bottom: 1px solid #E7E7E7;
+}
+
+.btn-add {
+    float: right;
+    display: flex;
+    margin-top: -80px;
+    margin-right: 30px;
+}
+
+.search {
+    display: flex;
+    float: right;
+    width: 500px;
+    margin-top: -80px;
+    margin-right: -80px;
+}
+
+.search i {
+    margin-left: -60px;
+    color: #aaa;
+}
+
+.search input {
+    width: 250px !important;
+    border-radius: 5px !important;
+}
+
+.portlet-body {
+    margin-top: 80px;
+}
+.panel-group .panel+.panel {
+    margin-top: 0px;
+}
+
+.panel.header {
+    margin-bottom: 0px;
+}
+
+.panel.header .panel-heading {
+    background-color: white;
+}
+
+.accordion .panel:nth-child(odd) .panel-heading {
+    background-color: #FAFAFA;
+}
+
+.accordion .panel:nth-child(even) .panel-heading {
+    background-color: white;
+}
+
+.accordion .panel .panel-title .accordion-toggle.accordion-toggle-styled{
+    background: none;
+}
+
+.accordion .fa-angle-down:before {
+    color: #333;
+}
+
+.fa-angle-down, .fa-angle-up {
+    float: right;
+}
+
+.pagination {
+    float: right;
+    margin-right: 40px;
+}
+
+.pagination>li>a, .pagination>li>span {
+    color: #333;
+}
+
+.panel-body label {
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.panel-body p {
+    margin: 0px;
+}
+
+.location-info {
+    padding: 0px 40px 40px 40px;
+    border-right: 1px solid #E7E7E7;
+}
+
+.location-map {
+    padding: 0px 40px;
+}
+
+.btn-edit {
+    background-color: #56B39A;
+}
+
+.btn-delete {
+    background-color: #F75979;
+    margin-left: 20px !important;
+}
+
+.btn-merge {
+    background-color: #A5ACAA;
+    margin-left: 20px !important;
+}
+
+.btn-submit {
+    background-color: #00C691;
+    margin-left: 20px;
+}
+
+.btn-cancel {
+    background-color: transparent;
+}
+
+.modal input {
+    width: 250px;
+    margin-left: 5px;
+    display: inline-flex;
+    border-radius: 5px !important;
+}
+
+.modal .tagsinput {
+    display: inline-flex;
+}
+
+.modal .bootstrap-tagsinput {
+    border-radius: 5px !important;
+}
+
+.modal input:focus {
+    border-color: #00C691;
+}
+
+.modal form {
+    display: inline;
+}
+
+.modal-body {
+    padding-bottom: 40px;
+}
+
+.modal-content {
+    border-radius: 10px !important;
+}

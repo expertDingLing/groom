@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../../layouts/global_style.ejs')  %>
+        <%- include('../../layouts/theme_style.ejs')  %>
+    </head>
+
+    <body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid">
+
+        <%- include('../../layouts/navbar.ejs')  %>
+
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+
+            <%- include('../../layouts/sidebar.ejs')  %>
+
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <!-- BEGIN CONTENT BODY -->
+                <div class="page-content">
+                    <!-- BEGIN PAGE HEADER-->
+                    <div class="page-bar">
+                        <ul class="page-breadcrumb">
+                            <li>
+                                <i class="icon-home"></i>
+                                <span>Dashboard</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END PAGE HEADER-->
+                </div>
+                <!-- END CONTENT BODY -->
+            </div>
+            <!-- END CONTENT -->
+        </div>
+        <!-- END CONTAINER -->
+
+        <%- include('../../layouts/global_script.ejs')  %>
+        <%- include('../../layouts/theme_script.ejs')  %>
+        <!-- PAGE LEVEL SCRIPTS -->
+        <script src="/assets/pages/scripts/dashboard.js" type="text/javascript"></script>
+
+    </body>
+
+</html>

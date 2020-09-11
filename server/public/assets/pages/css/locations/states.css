@@ -1,0 +1,47 @@
+.btn-add {
+    float: right;
+    margin-top: -50px;
+}
+
+.portlet.light.bordered {
+    margin-top: -10px;
+    background-color: transparent;
+    border: none !important;
+    padding: 0px;
+}
+
+.label-danger {
+    color: #E32C2C;
+    background-color: #EF8A98;
+}
+
+.label-success {
+    color: #037254;
+    background-color: #6FFAD5;
+}
+
+.dataTables_filter {
+    margin-top: -77px;
+    margin-right: 100px;
+}
+
+.dataTables_filter input {
+    border-radius: 5px !important;
+    height: 35px;
+}
+
+.table-checkable tr>td:first-child, 
+.table-checkable tr>th:first-child {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.dataTables_length select {
+    border-radius: 5px !important;
+    margin-left: 10px;
+}
+
+.btn-edit {
+    height: 22px;
+    padding-top: 0;
+}

@@ -1,0 +1,140 @@
+.page-title {
+    margin: 0px;
+}
+
+.btn-group {
+    display: flex;
+    margin-top: -40px;
+    /* margin-left: 150px; */
+    float: right;
+}
+
+.category-panel {
+    border: 1px solid #D2D2D2;
+    height: 700px;
+}
+
+.category-panel .left {
+    border-right: 1px solid #D2D2D2;
+    height: 100%;
+    padding-top: 20px;
+    padding-left: 50px;
+}
+
+.category-panel .left p {
+    color: #CDCDCD;
+}
+
+.btn-collapse, .btn-expand, .btn-preview, .btn-delete {
+    color: #0E87FF;
+    background: transparent;
+    padding: 0px;
+}
+
+.btn-collapse:hover, .btn-expand:hover, .btn-preview:hover, .btn-delete:hover {
+    color: #0E87FF;
+    opacity: 0.7;
+}
+
+.btn-collapse:focus, .btn-expand:focus, .btn-preview:focus, .btn-delete:focus {
+    color: #0E87FF;
+}
+
+.btn-expand {
+    margin-left: 20px;
+}
+
+.category-panel .left ul {
+    list-style: none;
+    padding: 0px;
+    margin-top: 30px;
+}
+
+.category-panel .left li {
+    margin-top: 10px;
+    color: #8A8A8A;
+}
+.category-panel .right {
+    height: 100%;
+    padding: 0px;
+}
+
+.category-panel .right .top {
+    background: #E6E6E6;
+    border-bottom: 1px solid #D2D2D2;;
+    height: 25%;
+    padding-top: 20px;
+    padding-left: 50px;
+}
+
+.btn-preview {
+    margin-top: 5px;
+}
+.category-panel .right .top .nav-tabs {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.category-panel .right .top .nav-tabs a {
+    font-weight: 600;
+    color: #474747;
+    padding: 0px;
+    margin-right: 20px;
+    /* padding-right: 20px; */
+}
+
+.category-panel .right .top .nav-tabs .active a {
+    color: #00C691;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #00C691;
+}
+
+.category-panel .right .main {
+    height: 75%;
+    padding: 50px;
+}
+
+.category-panel .right .main label {
+    display: block;
+}
+
+.label-image {
+    margin-top: 50px;
+}
+
+.btn-delete {
+    display: block;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.category-panel .right .main input[type='text'] {
+    width: 200px;
+    height: 30px;
+}
+
+.category-panel .right .main input[type='text']:focus {
+    border-color: #00C691;
+}
+
+.category-panel .right .main img {
+    width: 150px;
+    height: 120px;
+    margin-top: 20px;
+}
+
+.category-panel .right .main .input-container {
+  padding: 20px;
+  background: #EEEEEE;
+  width: 300px;
+  height: 120px;
+  margin-left: 180px;
+  margin-top: -151px;
+  padding-top: 1px;
+}
+
+.category-panel .right .main .input-container p {
+    font-weight: 600;
+}
+

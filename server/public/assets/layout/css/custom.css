@@ -1,0 +1,73 @@
+.page-content {
+    background: #F7F7F7 !important;
+}
+
+.page-header {
+    margin-top: -10px;
+    border-bottom: none;
+}
+
+.page-title h2 {
+    color: #474747;
+}
+
+.page-title small {
+    color: #8A8A8A !important;
+}
+
+.btn-custom {
+    color: white;
+    border-radius: 5px !important;
+}
+
+.btn-custom:hover, .btn-custom:focus {
+    opacity: 0.9;
+    color: white;
+}
+
+.btn.btn-outline.custom {
+    border-radius: 5px !important;
+    border-color: #00C691;
+    color: #00C691;
+    background: 0 0;
+    margin-left: 10px;
+}
+
+.btn.btn-outline.custom:hover {
+    background: #00C691;
+    color: white;
+}
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:after {
+    content: none !important;
+}
+
+.pagination>.active>a, 
+.pagination>.active>a:focus, 
+.pagination>.active>a:hover, 
+.pagination>.active>span, 
+.pagination>.active>span:focus, 
+.pagination>.active>span:hover {
+    background-color: #00C691;
+    border-color: #00C691;
+}
+
+.table-bordered, 
+.table-bordered>tbody>tr>td, 
+.table-bordered>tbody>tr>th, 
+.table-bordered>tfoot>tr>td, 
+.table-bordered>tfoot>tr>th, 
+.table-bordered>thead>tr>td, 
+.table-bordered>thead>tr>th {
+    border-right: none;
+}
+
+.bootstrap-tagsinput > span {
+    background-color: #DCDBDB;
+}
+
+.bootstrap-tagsinput .tag {
+    color: #666666 !important;
+}

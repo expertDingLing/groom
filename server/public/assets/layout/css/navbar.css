@@ -1,0 +1,42 @@
+.page-header.navbar .page-logo, 
+.page-header.navbar .page-top, 
+.page-header-inner  {
+    background: #00C691;
+}
+
+@media (max-width: 480px) {
+    .page-header.navbar .top-menu,
+    .page-header.navbar .top-menu .navbar-nav>li.dropdown-user .dropdown-toggle {
+        background: #00C691;
+    }
+}
+
+@media (min-width: 768px) {
+    .page-header.navbar .menu-toggler {
+        float: left !important;
+    }
+    .page-sidebar-closed.page-sidebar-closed-hide-logo .page-header.navbar .menu-toggler.sidebar-toggler {
+        margin-left: 15px;
+    }
+}
+
+.page-header.navbar .page-logo .logo-default {
+    margin-left: 15px;
+    margin-top: 10px;
+    height: 40px;
+}
+
+.page-header.navbar .top-menu .navbar-nav>li.dropdown-language>.dropdown-toggle>.langname, 
+.page-header.navbar .top-menu .navbar-nav>li.dropdown-user>.dropdown-toggle>.username, 
+.page-header.navbar .top-menu .navbar-nav>li.dropdown-user>.dropdown-toggle>i {
+    color: white;
+}
+
+.page-header.navbar .top-menu .navbar-nav>li.dropdown.open .dropdown-toggle,
+.page-header.navbar .top-menu .navbar-nav>li.dropdown>.dropdown-toggle:hover {
+    background: transparent !important;
+}
+
+.fa-angle-down:before {
+    color: white;
+}
