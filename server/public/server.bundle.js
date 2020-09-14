@@ -155,7 +155,7 @@ eval("\n\nvar _ = __webpack_require__(/*! lodash */ \"lodash\");\nvar defaultCon
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar dotenv = __webpack_require__(/*! dotenv */ \"dotenv\");\nvar _ = __webpack_require__(/*! lodash */ \"lodash\");\nvar Joi = __webpack_require__(/*! joi */ \"joi\");\nvar chalk = __webpack_require__(/*! chalk */ \"chalk\");\n\n// import configuration from .env file\ndotenv.config();\n\n/**\r\n * Joi schema for validating environment variables\r\n */\nvar envVarsSchema = Joi.object({\n  NODE_ENV: Joi.string().valid('development', 'production', 'test'),\n  MONGO_URI: Joi.string().uri().required(),\n  SERVER_HOST: Joi.string().required(),\n  SERVER_PORT: Joi.number().required(),\n  JWT_SECRET: Joi.string().required(),\n  TIMEZONE: Joi.string()\n}).unknown();\n\nvar _envVarsSchema$valida = envVarsSchema.validate(process.env),\n    value = _envVarsSchema$valida.value,\n    error = _envVarsSchema$valida.error;\n\nif (error) {\n  console.log(chalk.red('\\n[-] Invalid environment variables. Please edit the \".env\" file and restart the process.'));\n  throw new Error(error.message);\n}\n\nvar envConfig = {\n  env: value.NODE_ENV,\n  mongo: {\n    uri: value.MONGO_URI\n  },\n  server: {\n    host: value.SERVER_HOST,\n    port: value.SERVER_PORT\n  },\n  jwt: {\n    secret: value.JWT_SECRET\n  },\n  timezone: value.TIMEZONE\n};\n\nvar config = {};\n\nif (envConfig.env === 'development') {\n  config = __webpack_require__(/*! ./config.dev */ \"./src/config/config.dev.js\");\n} else if (envConfig.env === 'production') {\n  config = __webpack_require__(/*! ./config.prod */ \"./src/config/config.prod.js\");\n} else if (envConfig.env === 'test') {\n  config = __webpack_require__(/*! ./config.test */ \"./src/config/config.test.js\");\n}\n\nconfig = _.merge({}, config, envConfig);\n\nmodule.exports = config;\n\n//# sourceURL=webpack:///./src/config/index.js?");
+eval("\n\nvar _ = __webpack_require__(/*! lodash */ \"lodash\");\nvar Joi = __webpack_require__(/*! joi */ \"joi\");\nvar chalk = __webpack_require__(/*! chalk */ \"chalk\");\n\n/**\r\n * Joi schema for validating environment variables\r\n */\nvar envVarsSchema = Joi.object({\n  NODE_ENV: Joi.string().valid('development', 'production', 'test'),\n  MONGO_URI: Joi.string().uri().required(),\n  SERVER_HOST: Joi.string().required(),\n  SERVER_PORT: Joi.number().required(),\n  JWT_SECRET: Joi.string().required(),\n  TIMEZONE: Joi.string()\n}).unknown();\n\nvar _envVarsSchema$valida = envVarsSchema.validate(process.env),\n    value = _envVarsSchema$valida.value,\n    error = _envVarsSchema$valida.error;\n\nif (error) {\n  console.log(chalk.red('\\n[-] Invalid environment variables. Please edit the \".env\" file and restart the process.'));\n  throw new Error(error.message);\n}\n\nvar envConfig = {\n  env: value.NODE_ENV,\n  mongo: {\n    uri: value.MONGO_URI\n  },\n  server: {\n    host: value.SERVER_HOST,\n    port: value.SERVER_PORT\n  },\n  jwt: {\n    secret: value.JWT_SECRET\n  },\n  timezone: value.TIMEZONE\n};\n\nvar config = {};\n\nif (envConfig.env === 'development') {\n  config = __webpack_require__(/*! ./config.dev */ \"./src/config/config.dev.js\");\n} else if (envConfig.env === 'production') {\n  config = __webpack_require__(/*! ./config.prod */ \"./src/config/config.prod.js\");\n} else if (envConfig.env === 'test') {\n  config = __webpack_require__(/*! ./config.test */ \"./src/config/config.test.js\");\n}\n\nconfig = _.merge({}, config, envConfig);\n\nmodule.exports = config;\n\n//# sourceURL=webpack:///./src/config/index.js?");
 
 /***/ }),
 
@@ -531,17 +531,6 @@ eval("module.exports = require(\"cookie-parser\");\n\n//# sourceURL=webpack:///e
 /***/ (function(module, exports) {
 
 eval("module.exports = require(\"cors\");\n\n//# sourceURL=webpack:///external_%22cors%22?");
-
-/***/ }),
-
-/***/ "dotenv":
-/*!*************************!*\
-  !*** external "dotenv" ***!
-  \*************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("module.exports = require(\"dotenv\");\n\n//# sourceURL=webpack:///external_%22dotenv%22?");
 
 /***/ }),
 

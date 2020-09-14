@@ -5,9 +5,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node ./public/server.bundle.js",
-    "dev": "nodemon",
-    "prod": "webpack --mode=production --config webpack.config.js && NODE_ENV=production node ./public/server.bundle.js"
+    "start": "webpack --mode=development --config webpack.config.js && nodemon ./public/server.bundle.js",
+    "prod": "webpack --mode=production --config webpack.config.js && NODE_ENV=production node ./public/server.bundle.js",
+    "test": "cross-env NODE_ENV=test mocha --timeout 20000 --recursive --exit",
+    "test:watch": "cross-env NODE_ENV=test nodemon --exec 'mocha --recursive'"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

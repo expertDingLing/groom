@@ -1,7 +1,0 @@
-{
-    "verbose": false,
-    "watch": [
-      "./src"
-    ],
-    "exec": "webpack --mode=development --config webpack.config.js && node ./public/server.bundle.js"
-}

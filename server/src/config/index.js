@@ -1,10 +1,6 @@
-const dotenv = require('dotenv');
 const _ = require('lodash');
 const Joi = require('joi');
 const chalk = require('chalk');
-
-// import configuration from .env file
-dotenv.config();
 
 /**
  * Joi schema for validating environment variables
