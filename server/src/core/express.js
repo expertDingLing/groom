@@ -25,7 +25,9 @@ if (config.env === 'production') {
   app.use(morgan("dev")); // Logger
 }
 app.use(compression()); // Compression
-app.use(helmet()); // Secure app by setting various HTTP headers
+app.use(helmet({    
+  contentSecurityPolicy: false // Secure app by setting various HTTP headers
+})); 
 if (config.env !== 'production') {
   app.use(cors()); // Cross-Origin-Resource-Sharing
 }
@@ -33,7 +35,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // Support parsing of applic
 app.use(bodyParser.json()); // parse body params and attache them to req.body
 app.use(cookieParser());
 app.use(session({
-  secret: "OzhclfxGp956SMjtq",
+  secret: "polarbear",
   cookie: {maxAge: 1000 * 60 * 60 * 24 * 5},  // This is expire time - 5 days
   resave: true,
   saveUninitialized: true,

@@ -46,7 +46,61 @@
                         <button type="button" class="btn btn-filter">Filters</button>
                         <button type="button" class="btn btn-action">Actions</button>
                         <div class="btn-toolbar">
-                            
+                            <button type="button" class="btn btn-custom btn-apply">
+                                Apply
+                            </button>
+                            <button type="button" class="btn btn-cancel">
+                                <i class="fa fa-close"></i>
+                            </button>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <label>Booking: </label>
+                                    <span>Any</span> 
+                                    <i class="fa fa-angle-down"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="javascript:;">Any</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <label>Dates: </label>
+                                    <span>Current dates</span>
+                                    <i class="fa fa-angle-down"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="javascript:;">Current dates</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <label>Order By:</label>
+                                    <span>ID</span> 
+                                    <i class="fa fa-arrow-up"></i>
+                                    <i class="fa fa-angle-down"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="javascript:;">ID</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <label>Bookings:</label>
+                                    <span>Exist</span> 
+                                    <i class="fa fa-angle-down"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="javascript:;">Exist</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="tagsinput">
                             <input type="text" value="All Steps" data-role="tagsinput" style="display: none;">
@@ -57,7 +111,221 @@
                     </div>
                     
                     <div class="main">
-                        
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <input type="checkbox"/>
+                                        </th>
+                                        <th>ID</th>
+                                        <th>Labels/Actions</th>
+                                        <th>Booking Data</th>
+                                        <th>Booking Dates</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox"/>
+                                        </td>
+                                        <td>1</td>
+                                        <td>
+                                            <div class="labels">
+                                                <span class="label label-appartment">Appartment #2</span>
+                                                <span class="label label-status">Approved</span>
+                                                <span class="label label-payment">Payment Unknown</span>
+                                            </div>
+                                            <div class="actions">
+                                                <form>
+                                                    <i class="fa fa-dollar"></i>
+                                                    <input class="form-control input-amount" type="number">
+                                                </form>
+                                                <div class="action-btn-group">
+                                                    <a href="javascript:;" class="btn btn-actions btn-envelope">
+                                                        <i class="fa fa-envelope"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-tag"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-pencil"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-filter"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-file"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-archive"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-flag"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-globe"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-external-link"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions btn-trash">
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-ban"></i>
+                                                    </a>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <label class="label-owner">Data of Owner 3: </label>
+                                            <label class="label-first-name">First Name: </label>
+                                            <span>Emily</span>
+                                            <label class="label-last-name">Last Name: </label>
+                                            <span>Gonzalez</span>
+                                        </td>
+                                        <td>
+                                            <span class="booking-date">June 30, 2020-July 4,2020</span>
+                                            <small class="created-date">Created on June 30, 2020</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox"/>
+                                        </td>
+                                        <td>2</td>
+                                        <td>
+                                            <div class="labels">
+                                                <span class="label label-appartment">Appartment #2</span>
+                                                <span class="label label-status">Approved</span>
+                                                <span class="label label-payment">Payment Unknown</span>
+                                            </div>
+                                            <div class="actions">
+                                                <form>
+                                                    <i class="fa fa-dollar"></i>
+                                                    <input class="form-control input-amount" type="number">
+                                                </form>
+                                                <div class="action-btn-group">
+                                                    <a href="javascript:;" class="btn btn-actions btn-envelope">
+                                                        <i class="fa fa-envelope"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-tag"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-pencil"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-filter"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-file"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-archive"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-flag"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-globe"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-external-link"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions btn-trash">
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-ban"></i>
+                                                    </a>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <label class="label-owner">Data of Owner 3: </label>
+                                            <label class="label-first-name">First Name: </label>
+                                            <span>Emily</span>
+                                            <label class="label-last-name">Last Name: </label>
+                                            <span>Gonzalez</span>
+                                        </td>
+                                        <td>
+                                            <span class="booking-date">June 30, 2020-July 4,2020</span>
+                                            <small class="created-date">Created on June 30, 2020</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox"/>
+                                        </td>
+                                        <td>3</td>
+                                        <td>
+                                            <div class="labels">
+                                                <span class="label label-appartment">Appartment #2</span>
+                                                <span class="label label-status">Approved</span>
+                                                <span class="label label-payment">Payment Unknown</span>
+                                            </div>
+                                            <div class="actions">
+                                                <form>
+                                                    <i class="fa fa-dollar"></i>
+                                                    <input class="form-control input-amount" type="number">
+                                                </form>
+                                                <div class="action-btn-group">
+                                                    <a href="javascript:;" class="btn btn-actions btn-envelope">
+                                                        <i class="fa fa-envelope"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-tag"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-pencil"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-filter"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-file"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-archive"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-flag"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-globe"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-external-link"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions btn-trash">
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="btn btn-actions">
+                                                        <i class="fa fa-ban"></i>
+                                                    </a>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <label class="label-owner">Data of Owner 3: </label>
+                                            <label class="label-first-name">First Name: </label>
+                                            <span>Emily</span>
+                                            <label class="label-last-name">Last Name: </label>
+                                            <span>Gonzalez</span>
+                                        </td>
+                                        <td>
+                                            <span class="booking-date">June 30, 2020-July 4,2020</span>
+                                            <small class="created-date">Created on June 30, 2020</small>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
                 <!-- END CONTENT BODY -->

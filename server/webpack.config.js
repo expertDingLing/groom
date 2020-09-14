@@ -21,6 +21,10 @@ const config = {
                 loader: 'babel-loader'
             },
             {
+                test: /\.ejs$/,
+                loader: 'ejs-loader'
+            },
+            {
                 test: /\.less$/,
                 loader: "style-loader!css-loader!less-loader",
             },

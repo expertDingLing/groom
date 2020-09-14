@@ -1,0 +1,343 @@
+.list-unstyled.list-inline {
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.login__header__menu{
+    display: contents;
+}
+.about{
+    display: contents;
+    text-align: center;
+    color: white;
+}
+
+.cities{
+    display: contents;
+    text-align: center;
+    color: white;
+}
+
+.social{
+    display: contents;
+    color: white;
+    text-align: center;
+}
+
+.footer{
+    height: 400px;
+}
+
+.row.container{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.list-unstyled.list-inline{
+    height: 15px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.fa.fa-twitter{
+    color: #299494;
+    font-size: 25px;
+}
+
+.fa.fa-facebook-official{
+    color: #299494;
+    font-size: 25px;
+    margin: 0 20px;
+}
+
+.fa.fa-instagram{
+    color: #299494;
+    font-size: 25px;
+}
+
+.signin_btn{
+    border: none;
+    background: white;
+    margin-top: 7px;
+}
+
+.signup_btn{
+    border: none;
+    background: white;
+}
+
+.modal-content{
+    height: 750px;
+}
+
+.fa.fa-remove{
+    margin-right: 20px;
+}
+
+.container-nav{
+    margin-top: 40px;
+    width: 90%;
+    margin-left: 25px;
+}
+
+.form-control{
+    width: 90%;
+    margin-left: 25px;
+    height: 45px;
+    margin-top: 50px;
+}
+
+.continue_btn{
+    font-size: 20px;
+    width: 90%;
+    margin-left: 25px;
+    background: #299494;
+    border-radius: 5px;
+    border: none;
+    height: 45px;
+    color: white;
+    margin-top: 50px;
+}
+
+.email_btn{
+    font-size: 20px;
+    width: 90%;
+    margin-left: 25px;
+    border-radius: 5px;
+    height: 45px;
+    color: #999999;
+    margin-top: 30px;
+    background: white;
+    border-color: #999999;
+}
+
+.facebook_btn{
+    font-size: 20px;
+    width: 90%;
+    margin-left: 25px;
+    background: #5f79d1;
+    border-radius: 5px;
+    border: none;
+    height: 45px;
+    color: white;
+    margin-top: 30px;
+}
+
+.google_btn{
+    font-size: 20px;
+    width: 90%;
+    margin-left: 25px;
+    border-radius: 5px;
+    height: 45px;
+    color: #999999;
+    margin-top: 30px;
+    background: white;
+    border-color: #999999;
+}
+
+.avatar-photo {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    height:120px;
+    width: 120px;
+    overflow: hidden;
+    box-shadow: 0 0 0 6px #fff , 0 0 0 7px #ccc;
+    z-index: 3;
+    margin-top: 48px;
+    border-radius: 60px;
+    margin-left: auto;
+  }
+  
+  .avatar-photo  input[type=file] {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    -moz-opacity:0;
+    opacity: 0;
+    z-index: 9;
+  }
+  .avatar-photo  img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .avatar-photo:hover {
+    cursor: pointer;
+  }
+
+  .password{
+      width: 65%;
+      margin-left: 80px;
+      margin-top: 50px;
+      height: 45px;
+  }
+
+  .password1{
+    width: 65%;
+    margin-left: 80px;
+    height: 45px;
+    margin-top: 10px;
+}
+
+  .text{
+    width: 65%;
+    margin-left: 80px;
+    margin-top: 10px;
+    height: 45px;
+  }
+
+  .control{
+    width: 90%;
+    margin-left: 25px;
+    margin-top: 10px;
+    height: 30px;
+  }
+
+  .control:focus{
+      outline-color: #299494;
+  }
+
+  .phone_prefix:focus{
+      outline-color: #299494;
+  }
+
+  .phone_main:focus{
+    outline-color: #299494;
+  }
+
+  .password1:focus{
+      outline-color: #299494;
+  }
+
+  .text:focus{
+      outline-color: #299494;
+  }
+
+  .login_btn{
+    font-size: 20px;
+    width: 65%;
+    margin-left: 80px;
+    background: #299494;
+    border-radius: 5px;
+    border: none;
+    height: 45px;
+    color: white;
+    margin-top: 50px;
+}
+
+.fa.fa-eye{
+    margin-left: -26px;
+}
+
+.google_signup{
+    margin-top: -70px;
+    height: 25px;
+    margin-left: 95px;
+}
+
+.phone_prefix{
+    width: 7%;
+    margin-left: 25px;
+}
+
+.phone_main{
+    margin-left: 30px;
+    width: 77%;
+}
+
+.create_account{
+    font-size: 20px;
+    width: 65%;
+    margin-left: 80px;
+    background: #299494;
+    border-radius: 5px;
+    border: none;
+    height: 45px;
+    color: white;
+    margin-top: 20px;
+}
+
+.goto_login{
+    border: none;
+    background: white;
+    margin-top: -1px;
+    color: #299494;
+}
+
+.goto_signup{
+    border: none;
+    background: white;
+    margin-top: -1px;
+    color: #299494;
+}
+
+.forgot_btn{
+    border: none;
+    background: white;
+    margin-top: -1px;
+    margin-top: 30px;
+    margin: 0 30px;
+}
+
+.more_btn{
+    border: none;
+    background: white;
+    margin-top: -1px;
+}
+
+.sms{
+    width: 70%;
+    height: 45px;
+    margin-left: 80px;
+    background: #f4f4f4;
+    border: none;
+    margin-top: 50px;
+}
+
+.sms:focus{
+    outline-color: #299494;
+}
+
+.smartphone{
+    height: 30px;
+    margin-left: -40px;
+}
+
+.email{
+    width: 70%;
+    margin-left: 80px;
+    height: 45px;
+    margin-top: 50px;
+    background: #f4f4f4;
+    border: none;
+}
+
+.email:focus{
+    outline-color: #299494;
+}
+
+.reset{
+    margin-left: 80px;
+    border: none;
+    border-radius: 5px;
+    background: #299494;
+    color: white;
+    height: 45px;
+    width: 70%;
+    margin-top: 50px;
+}
+
+.fa.fa-envelope-o{
+    margin-left: -33px;
+}

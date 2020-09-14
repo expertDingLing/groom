@@ -119,3 +119,18 @@
     margin-top: 20px;
     height: 500px;
 }
+
+.table th {
+    color: black;
+    text-align: center;
+}
+
+.table thead th:nth-child(1),
+.table tbody tr td:nth-child(1) {
+    border-right: 1px solid #DCDBDB;
+    width: 10%;
+}
+
+.table tbody tr:nth-child(1) {
+    height: 80px;
+}

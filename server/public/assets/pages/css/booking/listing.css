@@ -79,3 +79,130 @@
     margin-top: 20px;
     height: 500px;
 }
+
+.btn-toolbar {
+    margin-top: 10px;
+}
+
+.btn-toolbar .btn-group {
+    margin-left: 10px;
+}
+
+.btn-toolbar .btn-group button {
+    padding-bottom: 0px;
+    border-radius: 5px !important;
+}
+
+.btn-toolbar .btn-group button .fa-angle-down::before {
+    color: #666666;
+}
+
+.btn-toolbar .btn-group button span {
+    color: #666666;
+}
+
+.btn-apply {
+    background-color: #00C691;
+}
+
+.btn-cancel {
+    margin-left: 0px !important;
+    background-color: white;
+    color: #666666;
+}
+
+.main {
+    margin-top: 40px !important;
+}
+
+.table th {
+    color: black;
+}
+
+.table .created-date {
+    display: block;
+    margin-left: 20px;
+    margin-top: 10px;
+    color: #666666;
+}
+
+.table label {
+    font-weight: 600;
+}
+
+.table .label-owner {
+    display: block;
+}
+
+.table .label-last-name {
+    margin-left: 10px;
+}
+
+.table .labels {
+    margin-top: 10px;
+}
+
+.table .label {
+    border-radius: 5px !important;
+}
+
+.table .label-appartment {
+    background-color: #74B0F4;
+}
+
+.table .label-status {
+    background-color:#40C8A3;
+}
+
+.table .label-payment {
+    background-color:#8A8A8A;
+}
+
+.table .actions {
+    margin-top: 20px;
+}
+
+.table .input-amount {
+    display: inline;
+    width: 70px;
+    height: 25px;
+    border-radius: 5px !important;
+    padding-right: 0px;
+}
+
+.table form {
+    display: inline;
+}
+
+.table .action-btn-group {
+    display: inline;
+    margin-left: 20px;
+}
+
+.table .btn-actions {
+    background-color: #E8E8E8;
+    border-radius: 5px !important;
+    height: 25px;
+    width: 30px;
+    padding-top: 2px;
+    padding-left: 8px;
+    margin-top: -4px;
+    margin-left: -2px;
+}
+
+.table .btn-actions i {
+    color: #BFBFBF;
+}
+
+
+.table .btn-actions:hover {
+    opacity: 0.8;
+}
+
+.table .btn-envelope {
+    padding-left: 7px;
+}
+
+.table .btn-trash {
+    margin-left: 15px;
+}

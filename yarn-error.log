@@ -1,0 +1,59 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js start
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Java\jdk1.8.0_181\bin;D:\DevTools\Android\AndroidSDK;C:\Users\Home\AppData\Roaming\nvm;C:\Program Files\nodejs;D:\DevTools\Android\AndroidSDK\platform-tools;C:\xampp\php;C:\Python;C:\Python\DLLs;C:\Python\Lib;C:\Python\Scripts;C:\Ruby\bin;C:\Program Files\MongoDB\Server\4.2\bin;C:\Program Files\Git\cmd;C:\Users\Home\AppData\Local\Microsoft\WindowsApps;C:\Users\Home\AppData\Roaming\npm;C:\Users\Home\AppData\Local\Yarn\bin;C:\Users\Home\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\Home\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Home\AppData\Local\GitHubDesktop\bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.16.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: E:\Projects\7_Groom\Groom\package.json: Unexpected token } in JSON at position 551
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:310:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "groom",
+    "version": "1.0.0",
+    "description": "Groom",
+    "author": "Ling.D",
+    "license": "MIT",
+    "main": "start.js",
+    "scripts": {
+      "postinstall": "node start install-children",
+      "start": "node start server:client",
+      "client": "node start client",
+      "server": "node start server",
+      "test": "node start test"
+    },
+    "devDependencies": {
+      "chalk": "^4.1.0",
+      "concurrently": "^5.2.0",
+      "figlet": "^1.4.0",
+      "husky": "^4.2.5",
+      "lodash": "^4.17.15",
+      "prettier": "^2.0.5",
+      "pretty-quick": "^2.0.1",
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "pretty-quick --staged"
+      }
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
