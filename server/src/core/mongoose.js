@@ -12,8 +12,7 @@ mongoose.set('useNewUrlParser', true); // FIXME: fix deprecation warnings
 mongoose.set('useUnifiedTopology', true); // FIXME: fix deprecation warnings
 
 if (config.env !== 'test') {
-  const mongoUri = process.env.MONGO_URI || config.mongo.uri;
-  mongoose.connect(mongoUri);
+  mongoose.connect(config.mongo.uri);
   mongoose.connection.once('open', async () => {
     await seed.createUsers();
   });
