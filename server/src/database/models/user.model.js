@@ -65,7 +65,7 @@ const userSchema = new mongoose.Schema(
     },
     // The permissions field will allow a normal user to perform
     // admin-like actions.
-    // By default, root and admin can do any thing (permissions field is ignored).
+    // By default, superadmin and admin can do any thing (permissions field is ignored).
     // So, call user.hasPermission(permission) to determine the permission.
     // The rules for updating and deleting are implemented in createXAuthorizationMiddleware middleware.
     permissions: {
@@ -239,7 +239,7 @@ userSchema.methods.clearToken = function () {
  * Otherwise, false
  */
 userSchema.methods.hasPermission = function (permission, action) {
-  if (this.role === 'admin' || this.role === 'root') {
+  if (this.role === 'admin' || this.role === 'super-admin') {
     return true;
   }
   return !!this.permissions[permission][action];
