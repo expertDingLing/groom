@@ -67,8 +67,5 @@
     "passport-local": "^1.0.0",
     "sendgrid-template-helper": "^1.0.3",
     "uuid": "^8.3.0"
-  },
-  "engines": {
-    "node": "12.16.3"
   }
 }

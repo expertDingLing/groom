@@ -1,0 +1,490 @@
+
+/*
+    Calendar Page
+*/
+.calendar-container{
+    padding: 50px;
+    .search-box{
+        border: 1px solid #C1C1C1;
+    }
+    .border-paper{
+        box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.12) !important;
+    }
+    .listItemContent{
+        padding: 20px;
+        box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.12) !important;
+        .image{
+            background-repeat: no-repeat !important;
+            background-size: contain !important;
+            height: 100px;
+        }
+        .page-title{
+            font-size: 35px;
+        }
+        .search-box{
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .user-list{
+            margin-top: 50px;
+        }
+        .user-info{
+            padding-left: 15px;
+            p{
+                font-size: 1.6rem;
+            }
+            h2{
+                color: #299494;
+            }
+        }
+    }
+}
+
+/*
+    Account page
+*/
+.account-container{
+    padding: 50px;
+    color: #808080;
+    .account-grid{
+        min-height: 1200px;
+        display: flex;
+        box-shadow: 0px 7px 27px #00000029;
+        border-radius: 10px;
+        .account-side{
+            background-color: #E6E6E6;
+            border-radius: 5px 0px 0px 5px;
+            .accountSider-container{
+                border-radius: 5px 0px 0px 5px;
+                padding-top: 100px;
+                .active{
+                    background-color: #299494 !important;
+                    color: white;
+                    svg{
+                        color: white;
+                    }
+                }
+                .profile-info{
+                    border-bottom: 1px solid #B3B3B3;
+                    padding-bottom: 40px;
+                    text-align: center;
+
+                    img{
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                    }
+                    
+                    h2{
+                        font-size: 1.3rem;
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                        color: #666666;
+                    }
+                    .profile-btn{
+                        margin-top: 10px;
+                        color: #299494 !important;
+                        border: 1px solid #299494 !important;
+                        width: 130px;
+                        height: 35px;
+                        text-transform: none;
+                        font-weight: bold;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+
+    
+        .accountContent{
+            padding: 50px;
+            .personal-container{
+                h1{
+                    color: #000000;
+                    margin-top: 30px;
+                    font-size: 2rem;
+                }
+                .info-display{
+                    position: relative;
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                    h2{
+                        font-size: 1.2rem;
+                    }
+                    .edit-btn{
+                        position: absolute;
+                        right: 5px;
+                        p{
+                            color: #299494;
+                            cursor: pointer;
+                        }
+                        span{
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+            }
+            .login-container{
+                h1{
+                    color: #000000;
+                    margin-top: 30px;
+                    font-size: 2rem;
+                }
+                .title{
+                    color: #000000;
+                    margin-top: 30px;
+                    font-size: 1.6rem;
+                }
+                .info-display{
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                    h2{
+                        font-size: 1.2rem;
+                    }
+                    .edit-btn{
+                        justify-content: flex-end;
+                        align-items: center;
+                        p{
+                            color: #299494;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .payment-container{
+                h1{
+                    color: #000000;
+                    margin-top: 50px;
+                    font-size: 2rem;
+                }
+
+                .tab-nav{
+                    margin-top: 30px;
+                    .MuiBox-root{
+                        cursor: pointer;
+                        font-size: 1.3rem;
+                    }
+                    .active{
+                        border-bottom: 1px solid #299494;
+                        transition: all 0.3s;
+                        color: #299494;
+                    }
+                }
+                .payment{
+                    padding-top: 40px;
+                    h2{
+                        color: #000000;
+                        font-size: 1.8rem;
+                    }
+                    p{
+                        font-size: 0.8rem;
+                        margin-top: 10px;
+                    }
+                    .card-block{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        span{
+                            font-size: 11px;
+                            margin-left: 4px;
+                            p{
+                                margin: 0px;
+                            }
+                            p:last-child{
+                                font-size: 0.6rem;
+                            }
+                        }
+                        button{
+                            font-size: 8px;
+                            padding: 4px;
+                            margin-left: 5px;
+                            color: #808080;
+                        }
+                        div:first-child{
+                            display: flex;
+                            align-items: center;
+                        }
+                        div:last-child{
+                            border: 1px solid #B3B3B3;
+                            padding-right: 5px;
+                            border-radius: 5px;
+                            height: 30px;
+                        }
+                    }
+
+                    .add-payment-btn{
+                        color: white;
+                        text-transform: none;
+                        margin-top: 50px;
+                        background-color: #299494;
+                        font-size: 1.6rem;
+                    }
+
+                    .gift-credit{
+                        margin-bottom: 30px;
+                        div:nth-child(2){
+                            span:last-child{
+                                color: #299494;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .cupon-block{
+                        margin-bottom: 30px;
+                    }
+                }
+                /* payout */
+                .paypout{
+                    .tax-fill{
+                        display: flex;
+                        div:first-child{
+                            width: 20%;
+                            background-color: #299494;    
+                            display: flex;
+                            justify-content: center;
+                            svg{
+                                width: 60%;
+                                height: 60%;
+                                color: white;
+                            }                       
+                        }
+                        div:last-child{
+                            padding: 15px 10px 30px 10px;
+                            margin-left: 50px;
+                            p:first-child{
+                                margin-bottom: 7px;
+                            }
+                        }
+                    }
+                    .payment-method{
+                        h1{
+                            color: #000000;
+                            font-size: 1.8rem;
+                        }
+                        .card-block{
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 20px;
+                            div:first-child{
+                                display: flex;
+                                button{
+                                    font-size: 8px;
+                                    padding: 4px;
+                                    margin-left: 10px;
+                                    color: #808080;
+                                }
+                            }
+                            .card-more{
+                                border: 1px solid #B3B3B3;
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+
+                    .add-payout-btn{
+                        color: white;
+                        text-transform: none;
+                        margin-top: 50px;
+                        background-color: #299494;
+                        font-size: 1.6rem;
+                    }
+                    
+                }
+
+                /*
+                    tax
+                */
+                .tax{
+                    h2{
+                        margin-top: 50px;
+                        color: #000000;
+                        font-size: 1.8rem;
+                    }
+                    .add-tax-btn{
+                        color: white;
+                        text-transform: none;
+                        margin-top: 50px;
+                        background-color: #299494;
+                        font-size: 1.6rem;
+                    }
+                }
+                
+            }
+
+            /*
+            notification-container
+            */
+            .notification-container{
+                h1{
+                    color: #000000;
+                    margin-top: 50px;
+                    font-size: 2rem;
+                }
+                .info-display{
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                    h2{
+                        font-size: 1.2rem;
+                    }
+                }
+
+                .toggle-block{
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    .swithch-btn{
+                        .MuiSwitch-switchBase.Mui-checked {
+                            color:#299494!important;
+                        }
+                    }
+                }
+            }
+
+            .privacy-container{
+                h1{
+                    color: #000000;
+                    margin-top: 50px;
+                    font-size: 2rem;
+                }
+
+                .tab-nav{
+                    margin-top: 20px;
+                    .MuiBox-root{
+                        cursor: pointer;
+                    }
+                    .active{
+                        border-bottom: 1px solid #299494;
+                        color: #299494;
+                        transition: all 0.5s linear;
+                    }
+                }
+
+                h2{
+                    color: #000000;
+                    margin-top: 40px;
+                    font-size: 1.8rem;
+                }
+                
+                .description{
+                    margin-top: 20px;
+                    width: 80%;
+                }
+            }
+            /*
+            Global-container
+            */
+            .global-container{
+                h1{
+                    color: #000000;
+                    margin-top: 50px;
+                    font-size: 2rem;
+                }
+                .display-block{
+                    margin-top: 30px;
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    div:first-child{
+                        h2{
+                            font-size: 1.3rem;
+                        }
+                    }
+                    div:last-child{
+                        color: #299494;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+            /*
+            Groom-container
+            */
+            .groom-container{
+                h1{
+                    color: #000000;
+                    margin-top: 50px;
+                    font-size: 2rem;
+                }
+
+                h2{
+                    color: #000000;
+                    margin-top: 50px;
+                    font-size: 1.7rem;
+                }
+                .read-more{
+                    span{
+                        color: #299494;
+                    }
+                }
+
+                .display-block{
+                    margin-top: 30px;
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    div:first-child{
+                        h2{
+                            font-size: 1.3rem;
+                        }
+                    }
+                    div:last-child{
+                        color: #299494;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+            /*
+            trust-container
+            */
+            .trust-container{
+                h1{
+                    color: #000000;
+                    margin-top: 50px;
+                    font-size: 2rem;
+                }
+
+                h3{
+                    color: #000000;
+                    margin-top: 50px;
+                    font-size: 1.7rem;
+                }
+                
+                .display-block{
+                    margin-top: 30px;
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    div:first-child{
+                        h2{
+                            font-size: 1.3rem;
+                        }
+                    }
+                    div:last-child{
+                        color: #299494;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+                .verify-info{
+                    margin-top: 20px;
+                    background-color: #DEDEDE;
+                    padding: 10px;
+                }
+
+                .id-btn{
+                    color: white;
+                    text-transform: none;
+                    margin-top: 50px;
+                    background-color: #299494;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+    
+}
