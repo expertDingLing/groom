@@ -91,7 +91,7 @@ const Header = props => {
   const MenuItems = [
       {
         menuTitile: 'Home',
-        pageURL: '/'
+        pageURL: '/provider/home'
       },
       {
         menuTitile: 'Inbox',
@@ -146,7 +146,7 @@ const Header = props => {
     },
     {
         Title: "Logout",
-        url: '/provider/logout'
+        url: '/'
     }
     
   ];
@@ -170,7 +170,7 @@ const Header = props => {
     <div className={classes.root}>
       <AppBar position="static" className={classes.headerSection}>
         <Toolbar>
-            <Button className={classes.title} onClick={() =>handleMenuClick('/provider/performance')}>
+            <Button className={classes.title} onClick={() =>handleMenuClick('/provider/home')}>
                 <img className={classes.logo} src={'../../assets/images/logo.png'} alt="logo img"/>
             </Button>
             <div style={{flex: 1}}>

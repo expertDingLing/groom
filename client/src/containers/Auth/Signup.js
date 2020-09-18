@@ -15,9 +15,9 @@ export class Signup extends Component {
         }
     }
 
-    createAccountHandle = () => {
-        this.props.history.push('/login');
-    }
+    // createAccountHandle = () => {
+    //     this.props.history.push('/login');
+    // }
     render() {
         const { passwordShow, confirmPasswordShow } = this.state;
         return (
@@ -56,7 +56,7 @@ export class Signup extends Component {
                         <Typography component="p" className="terms"> Terms & Conditions</Typography>
                     </Grid>
                     <Grid style={{textAlign: "center"}}>
-                        <Button variant="contained" className="create-account-btn" onClick={()=>this.createAccountHandle()}>Create an Account</Button>
+                        <Button variant="contained" className="create-account-btn">Create an Account</Button>
                     </Grid>
                     <IconButton className="close-icon-btn" onClick={()=>this.props.history.push('/')}>
                         <CloseRoundedIcon style={{fontSize: "30px"}}/>
