@@ -21,7 +21,7 @@ export const RoundButton = styled.input.attrs(props => ({
     }
 `;
 
-export const BlcakP = styled.p.attrs(props => ({
+export const BlackP = styled.p.attrs(props => ({
     fontSize: props.fontSize || "20px",
     align: props.align,
     weight: props.weight || "normal"
@@ -34,11 +34,11 @@ export const BlcakP = styled.p.attrs(props => ({
 export const GrayP = styled.p.attrs(props => ({
     fontSize: props.fontSize || "20px",
     align: props.align,
-    weight: props.weight || "normal",
+    weight: props.weight || "normal"
 }))`
     color: #717171;
     font-size: ${props => props.fontSize};
-    text-align: "${props => props.align}";
+    text-align: ${props => props.align};
     font-weight: ${props => props.fontWeight};
 `;
 

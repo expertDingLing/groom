@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Grid from '@material-ui/core/Grid';
 import '../../../assets/scss/provider1.scss'
-import AccountSiderbar from '../../../layouts/provider/AccountSiderbar'
+import AccountMenu from '../AccountMenu'
 import PersonalInfo from './personal'
 import Login from './login'
 import Payment from './payment'
@@ -47,7 +47,7 @@ export class index extends Component {
             <div className="account-container">
                 <Grid container className="account-grid">
                     <Grid item lg={2} className="account-side">
-                        <AccountSiderbar statChk={this.statChk} flag={this.state.flag} userName={userName} />
+                        <AccountMenu statChk={this.statChk} flag={this.state.flag} userName={userName} />
                     </Grid>
                     <Grid item lg={10} className="accountContent">
                         {flag === 'info' && (<PersonalInfo userName={userName} />)}

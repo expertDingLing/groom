@@ -1,46 +1,83 @@
-import React, { Component } from 'react'
-import Paper from '@material-ui/core/Paper';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
+import React, { useState } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import {
+  Box,
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+  IconButton,
+} from '@material-ui/core';
 import Rating from '@material-ui/lab/Rating';
-import Typography from '@material-ui/core/Typography';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import IconButton from '@material-ui/core/IconButton';
 
-export class HomePageCard extends Component {
-    render() {
-        const { title, alias, star, price, brand, url } = this.props.data;
-        return (
-            <Paper className="homepage-card-container">
-                 <Card className="card">
-                    <CardMedia
-                    className="card-media"
-                    image={url}
-                    >
-                        <div className="brand-favorite">
-                            <div className="brand-price">
-                                <p style={{fontSize: "20px"}}>{brand}</p>
-                                <p style={{fontSize: "32px"}}>${price}</p>
-                            </div>
-                            <IconButton>
-                                <FavoriteBorderIcon className="favorite-icon"/>
-                            </IconButton>
-                        </div>
-                    </CardMedia>
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="p">
-                            {title}
-                        </Typography>
-                        <Typography color="textSecondary" component="p">
-                            {alias}
-                        </Typography>
-                        <Rating className="star" name="read-only" value={parseFloat(star)} readOnly />
-                    </CardContent>
-                </Card>
-            </Paper>
-        )
-    }
+const useStyles = makeStyles((theme) => ({
+  image: {
+    height: 200,
+  },
+  bottomBar: {
+    paddingTop: theme.spacing(17),
+    display: 'flex',
+    justifyContent: 'space-between',
+  },
+  brandPrice: {
+    color: 'white',
+    paddingLeft: theme.spacing(2),
+  },
+  favorite: {
+    color: 'white',
+    paddingTop: theme.spacing(2),
+  },
+  title: {
+    marginBottom: 0,
+  },
+}));
+
+function HomePageCard(props) {
+  const { title, alias, rating, price, brand, image } = props.data;
+  const classes = useStyles();
+
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  return (
+    <Card>
+      <CardMedia className={classes.image} image={image}>
+        <Box className={classes.bottomBar}>
+          <Box className={classes.brandPrice}>
+            <Typography>{brand}</Typography>
+            <Typography variant="h6">${price}</Typography>
+          </Box>
+          <IconButton onClick={() => setIsFavorite(!isFavorite)}>
+            {isFavorite ? (
+              <FavoriteIcon className={classes.favorite} />
+            ) : (
+              <FavoriteBorderIcon className={classes.favorite} />
+            )}
+          </IconButton>
+        </Box>
+      </CardMedia>
+      <CardContent>
+        <Typography
+          className={classes.title}
+          gutterBottom
+          variant="h6"
+          component="p"
+        >
+          {title}
+        </Typography>
+        <Typography color="textSecondary" component="p">
+          {alias}
+        </Typography>
+        <Rating
+          className={classes.rating}
+          name="read-only"
+          value={parseFloat(rating)}
+          readOnly
+        />
+      </CardContent>
+    </Card>
+  );
 }
 
-export default HomePageCard
+export default HomePageCard;

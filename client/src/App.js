@@ -1,17 +1,27 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Provider from './containers/provider'
-import Home from './containers/Home'
+import { Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { ConnectedRouter } from 'connected-react-router';
+import { ThemeProvider } from '@material-ui/core/styles';
+import configureStore, { history } from './store/configureStore';
+import theme from './theme';
+import provider from './containers/provider';
+import home from './containers/generic';
+
+const store = configureStore();
 
 function App() {
   return (
-    <Router>
-      <Switch>
-          <Route path='/provider' component={ Provider } />
-          <Route path='/' component={ Home } />
-
-      </Switch>
-    </Router>
+    <Provider store={store}>
+      <ConnectedRouter history={history}>
+        <ThemeProvider theme={theme}>
+          <Switch>
+            <Route path="/provider" component={provider} />
+            <Route path="/" component={home} />
+          </Switch>
+        </ThemeProvider>
+      </ConnectedRouter>
+    </Provider>
   );
 }
 

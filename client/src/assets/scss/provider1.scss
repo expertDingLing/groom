@@ -486,5 +486,20 @@
             }
         }
     }
+}
+
+//homepage
     
+.home-container{
+    background-color: #fafafa;
+    padding: 50px;
+
+    .help_title{
+        margin-top: 1px;
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .upload_detail{
+        font-size: 13px;
+    }
 }

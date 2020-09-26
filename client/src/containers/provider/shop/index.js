@@ -98,7 +98,7 @@ export class index extends Component {
                                     <Grid container item lg={5} style={{background: `url(../../assets/images/${img})`}} className="image">
                                     </Grid>
                                     <Grid container item lg={7} className="description">
-                                        <Box style={{position: "relative",  width: "100%"}} >
+                                        <Box style={{position: "relative",  width: "70%"}} >
                                             <Typography className="title">{title}</Typography>
                                             <Typography className="address">{address}</Typography>
                                             <Box className="star-review">

@@ -1,34 +1,29 @@
-import React, { Component } from 'react'
-import { Switch, Route } from 'react-router-dom'
-import routes from '../../routes/providerRoutes'
-import Header from '../../layouts/provider/header'
-import Footer from '../../layouts/generic/footer'
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import routes from '../../routes/providerRoutes';
+import Header from './Header';
+import Footer from '../generic/Footer';
 
-export class index extends Component {
-    render() {
-        return (
-            <div>
-                <Header />
-                <div>
-                    <Switch>
-                        {routes.map((route, idx) => {
-                            return route.component ? (
-                            <Route
-                                key={idx}
-                                path={route.path}
-                                exact={route.exact}
-                                name={route.name}
-                                render={props => (
-                                <route.component {...props} />
-                                )} />
-                            ) : (null);
-                        })}
-                    </Switch>
-                </div>
-                <Footer />
-            </div>
-        )
-    }
+function index() {
+  return (
+    <React.Fragment>
+      <Header />
+      <Switch>
+        {routes.map((route, index) => {
+          return route.component ? (
+            <Route
+              key={index}
+              path={route.path}
+              exact={route.exact}
+              name={route.name}
+              render={(props) => <route.component {...props} />}
+            />
+          ) : null;
+        })}
+      </Switch>
+      <Footer />
+    </React.Fragment>
+  );
 }
 
-export default index
+export default index;
