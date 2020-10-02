@@ -44,9 +44,6 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 0,
     marginLeft: -theme.spacing(1.5),
   },
-  social: {
-    color: '#299494',
-  },
 }));
 
 function Footer() {
@@ -126,13 +123,13 @@ function Footer() {
               </ListItem>
               <ListItem className={classes.socialIcons}>
                 <IconButton>
-                  <TwitterIcon className={classes.social} />
+                  <TwitterIcon color="primary" />
                 </IconButton>
                 <IconButton>
-                  <FacebookIcon className={classes.social} />
+                  <FacebookIcon color="primary" />
                 </IconButton>
                 <IconButton>
-                  <InstagramIcon className={classes.social} />
+                  <InstagramIcon color="primary" />
                 </IconButton>
               </ListItem>
             </List>

@@ -1,4 +1,5 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createMuiTheme, fade } from '@material-ui/core/styles';
+import transitions from '@material-ui/core/styles/transitions';
 
 const theme = createMuiTheme({
   palette: {
@@ -26,7 +27,7 @@ const theme = createMuiTheme({
         color: 'white',
         background: '#299494',
         '&:hover': {
-          background: '#53a9a9',
+          background: '#53a9a9 !important',
         },
       },
       textPrimary: {
@@ -59,10 +60,12 @@ const theme = createMuiTheme({
         background: 'white',
         borderRadius: 5,
         border: '1px solid #808080',
-        '&$focused': {
-          border: '1px solid #53a9a9',
-        },
         paddingLeft: 10,
+        transition: transitions.create(['border-color', 'box-shadow']),
+        '&$focused': {
+          boxShadow: `${fade('#299494', 0.25)} 0 0 0 0.2rem`,
+          borderColor: '#299494',
+        },
       },
     },
     MuiTabs: {

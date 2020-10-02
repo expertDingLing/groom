@@ -71,7 +71,6 @@ function HomePageCard(props) {
         </Typography>
         <Rating
           className={classes.rating}
-          name="read-only"
           value={parseFloat(rating)}
           readOnly
         />

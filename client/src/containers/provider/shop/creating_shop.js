@@ -5,7 +5,8 @@ import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 import Radio from '@material-ui/core/Radio';
 import { Divider } from '@material-ui/core';
-
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 const styles = (theme) => ({
     container: {
@@ -34,7 +35,6 @@ const styles = (theme) => ({
     },
     creating: {
         display: 'flex',
-        marginTop: 30
     },
     image: {
         height: 120,
@@ -44,6 +44,11 @@ const styles = (theme) => ({
         marginLeft: 50,
         marginTop: 10
     },
+    image_detail2: {
+        marginLeft: 50,
+        marginTop: 60
+    },
+
     first_detail: {
         color: '#7c7c7c',
         fontWeight: 700
@@ -170,6 +175,19 @@ const styles = (theme) => ({
     },
     service: {
         marginTop: 20
+    },
+    radio_btn: {
+        height: 30,
+        marginTop: 30
+    },
+    images: {
+        display: 'grid'
+    },
+    radio: {
+        paddingTop: 45
+    },
+    second: {
+        marginTop: 75
     }
 })
 
@@ -180,6 +198,9 @@ export class index extends Component {
             formState: 'first',
         }
     }
+    handleChange = (event) => {
+        this.setState({value: event.target.value})
+    };
     render() {
         const {classes} = this.props;
         const {formState} = this.state;
@@ -205,10 +226,32 @@ export class index extends Component {
                         <Typography className={classes.detail}>You'll get to review the duplicated listing before publishing</Typography>
                     </div>
                     <div className={classes.creating}>
+                    <RadioGroup aria-label="gender" className={classes.radio} name="radio-button-demo" value={this.state.value} onChange={this.handleChange}>
+                        <FormControlLabel className = {classes.radio_detail1} value="radio1" color="primary" control={<Radio color="primary"/>} label="" />
+                        <FormControlLabel className = {classes.radio_detail2} value="radio2" color="primary" control={<Radio color="primary" className={classes.second}/>} label="" />
+                    </RadioGroup>
+                    <div className={classes.images}>
+                        <img src="/assets/images/service-2.png" alt="" className={classes.image}/>
+                        <img src="/assets/images/service-2.png" alt="" className={classes.image}/>
+                    </div>
+                    <div>
+                        {/* <img src="/assets/images/service-2.png" alt="" className={classes.image}/> */}
+                        <div className={classes.image_detail}>
+                            <Typography className={classes.first_detail}>Crochet Braids</Typography>
+                            <Typography className={classes.second_detail}>Private</Typography>
+                        </div>
+                        <div className={classes.image_detail2}>
+                            <Typography className={classes.first_detail}>Crochet Braids</Typography>
+                            <Typography className={classes.second_detail}>Private</Typography>
+                        </div>
+                        </div>
+                    </div>
+                    {/* <div className={classes.creating}>
                         <Radio
                             onChange={this.handleChange}
                             value="a"
                             color="primary"
+                            className={classes.radio_btn}
                             name="radio-button-demo"
                             inputProps={{ 'aria-label': 'A' }}
                         />
@@ -217,21 +260,7 @@ export class index extends Component {
                             <Typography className={classes.first_detail}>Crochet Braids</Typography>
                             <Typography className={classes.second_detail}>Private</Typography>
                         </div>
-                    </div>
-                    <div className={classes.creating}>
-                        <Radio
-                            onChange={this.handleChange}
-                            value="a"
-                            color="primary"
-                            name="radio-button-demo"
-                            inputProps={{ 'aria-label': 'A' }}
-                        />
-                        <img src="/assets/images/service-2.png" alt="" className={classes.image}/>
-                        <div className={classes.image_detail}>
-                            <Typography className={classes.first_detail}>Crochet Braids</Typography>
-                            <Typography className={classes.second_detail}>Private</Typography>
-                        </div>
-                    </div>
+                    </div> */}
                     <Button className={classes.next1} onClick={()=>this.setState({formState: "second"})}>Next</Button>
                 </Grid>
                 )}

@@ -5,8 +5,9 @@ import { ConnectedRouter } from 'connected-react-router';
 import { ThemeProvider } from '@material-ui/core/styles';
 import configureStore, { history } from './store/configureStore';
 import theme from './theme';
-import provider from './containers/provider';
 import home from './containers/generic';
+import customer from './containers/customer';
+import provider from './containers/provider';
 
 const store = configureStore();
 
@@ -16,6 +17,7 @@ function App() {
       <ConnectedRouter history={history}>
         <ThemeProvider theme={theme}>
           <Switch>
+            <Route path="/customer" component={customer} />
             <Route path="/provider" component={provider} />
             <Route path="/" component={home} />
           </Switch>

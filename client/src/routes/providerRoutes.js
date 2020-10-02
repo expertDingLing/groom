@@ -1,35 +1,39 @@
-import Email from '../containers/provider/email'
-import Shop from '../containers/provider/shop'
-import SpecialShop from '../containers/provider/shop/specialShop'
-import Performance from '../containers/provider/performance'
-import DecisionRefund from '../containers/provider/decisionRefund'
-import Account from '../containers/provider/account'
-import Calendar from '../containers/provider/Calendar'
-import Home from '../containers/provider/home'
-import Inbox from '../containers/provider/inbox'
-import Help from '../containers/provider/help'
-import BookingHistory from '../containers/provider/bookingHistory'
-import Refer from '../containers/provider/refer'
-import Profile from '../containers/provider/profile'
-import GiftCard from '../containers/provider/gift'
-import Switch from '../containers/provider/switch'
-import Creating from '../containers/provider/shop/creating_shop'
-import Manage from '../containers/provider/shop/manage'
-import Owner from '../containers/provider/shop/owner'
-import Dashboard from '../containers/provider/dashboard'
-import Unfinish from '../containers/provider/unfinish'
-import Video from '../containers/provider/video'
-import ManageService from '../containers/provider/service'
-import ApproveBooking from '../containers/provider/bookingHistory/Approvebooking'
-import ChangeBooking from '../containers/provider/bookingHistory/ChangeBooking'
-import Offer from '../containers/provider/offer'
-import Complaint from '../containers/provider/complaint'
-import Promotion from '../containers/provider/promotion'
-import PromotionTable from '../containers/provider/promotion/promotion_table'
-import PromotionDetail from '../containers/provider/promotion/promotion_detail'
-import ManageProduct from '../containers/provider/performance/manage_product'
-import EditProduct from '../containers/provider/performance/edit_product'
-import OfferRefund from '../containers/provider/offer/offer_refund'
+import Email from '../containers/provider/email';
+import Shop from '../containers/provider/shop';
+import SpecialShop from '../containers/provider/shop/specialShop';
+import Performance from '../containers/provider/performance';
+import DecisionRefund from '../containers/provider/decisionRefund';
+import Account from '../containers/provider/account';
+import Calendar from '../containers/provider/Calendar';
+import Home from '../containers/provider/home';
+import Inbox from '../containers/provider/inbox';
+import Help from '../containers/provider/help';
+import BookingHistory from '../containers/provider/bookingHistory';
+import Refer from '../containers/provider/refer';
+import Profile from '../containers/provider/profile';
+import GiftCard from '../containers/provider/gift';
+import Switch from '../containers/provider/switch';
+import Creating from '../containers/provider/shop/creating_shop';
+import Manage from '../containers/provider/shop/manage';
+import Owner from '../containers/provider/shop/owner';
+import Dashboard from '../containers/provider/dashboard';
+import Unfinish from '../containers/provider/unfinish';
+import Video from '../containers/provider/video';
+import ManageService from '../containers/provider/service';
+import ApproveBooking from '../containers/provider/bookingHistory/Approvebooking';
+import ChangeBooking from '../containers/provider/bookingHistory/ChangeBooking';
+import Offer from '../containers/provider/offer';
+import Complaint from '../containers/provider/complaint';
+import Promotion from '../containers/provider/promotion';
+import PromotionTable from '../containers/provider/promotion/promotion_table';
+import PromotionDetail from '../containers/provider/promotion/promotion_detail';
+import ManageProduct from '../containers/provider/performance/manage_product';
+import EditProduct from '../containers/provider/performance/edit_product';
+import OfferRefund from '../containers/provider/offer/offer_refund';
+import Donation from '../containers/provider/donation';
+import ClaimBusiness from '../containers/provider/claimBusiness';
+import WaitList from '../containers/provider/waitList';
+import Dispute from '../containers/provider/dispute';
 
 const routes = [
     { path: '/provider/email', name: 'Email', component: Email },
@@ -64,6 +68,10 @@ const routes = [
     { path: '/provider/manage_product', name: 'ManageProduct', component: ManageProduct },
     { path: '/provider/edit_product', name: 'EditProduct', component: EditProduct },
     { path: '/provider/offer_refund', name: 'OfferRefund', component: OfferRefund },
+    { path: '/provider/donation', name: 'Donation', component: Donation },
+    { path: '/provider/claim-business', name: 'ClaimBusiness', component: ClaimBusiness },
+    { path: '/provider/wait-list', name: 'WaitList', component: WaitList },
+    { path: '/provider/dispute', name: 'Dispute', component: Dispute },
 ];
 
 export default routes;

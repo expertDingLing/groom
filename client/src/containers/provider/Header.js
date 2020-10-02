@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
+import $ from 'jquery';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   Box,
@@ -13,7 +14,6 @@ import {
 import Navbar from 'reactjs-navbar';
 import 'reactjs-navbar/dist/index.css';
 import { faUsers } from '@fortawesome/free-solid-svg-icons';
-import $ from 'jquery';
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -41,7 +41,6 @@ function Header(props) {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const accountMenuOpen = Boolean(anchorEl);
-  const id = accountMenuOpen ? 'simple-popover' : undefined;
 
   const handleAccountMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -72,7 +71,20 @@ function Header(props) {
       title: 'Groomings',
       icon: faUsers,
       isAuth: true,
-      onClick: () => history.push('/provider/decision-refund'),
+      subItems: [
+        {
+          title: 'Decision Refund',
+          icon: faUsers,
+          isAuth: true,
+          onClick: () => history.push('/provider/decision-refund'),
+        },
+        {
+          title: 'Dispute',
+          icon: faUsers,
+          isAuth: true,
+          onClick: () => history.push('/provider/dispute'),
+        },
+      ],
     },
     {
       title: 'Calendar',
@@ -85,6 +97,12 @@ function Header(props) {
       icon: faUsers,
       isAuth: true,
       subItems: [
+        {
+          title: 'Create new listing',
+          icon: faUsers,
+          isAuth: true,
+          onClick: () => history.push('/provider/promotion'),
+        },
         {
           title: 'Booking History',
           icon: faUsers,
@@ -114,6 +132,12 @@ function Header(props) {
           icon: faUsers,
           isAuth: true,
           onClick: () => history.push('/provider/offer_refund'),
+        },
+        {
+          title: 'Donations',
+          icon: faUsers,
+          isAuth: true,
+          onClick: () => history.push('/provider/donation'),
         },
       ],
     },
@@ -157,6 +181,18 @@ function Header(props) {
           icon: faUsers,
           isAuth: true,
           onClick: () => history.push('/provider/offer'),
+        },
+        {
+          title: 'Claim Business',
+          icon: faUsers,
+          isAuth: true,
+          onClick: () => history.push('/provider/claim-business'),
+        },
+        {
+          title: 'Wait List',
+          icon: faUsers,
+          isAuth: true,
+          onClick: () => history.push('/provider/wait-list'),
         },
       ],
     },
@@ -203,12 +239,6 @@ function Header(props) {
         },
       ],
     },
-    {
-      title: 'Create new listing',
-      icon: faUsers,
-      isAuth: true,
-      onClick: () => history.push('/provider/promotion'),
-    },
   ];
 
   const accountMenuItems = [
@@ -250,11 +280,7 @@ function Header(props) {
     <Box className={classes.header}>
       <Navbar logo="/assets/images/logo.png" menuItems={menuItems} />
       <Box className={classes.account} id="account">
-        <IconButton
-          className={classes.avatar}
-          aria-describedby={id}
-          onClick={handleAccountMenuOpen}
-        >
+        <IconButton className={classes.avatar} onClick={handleAccountMenuOpen}>
           <Avatar
             className={classes.avatar}
             src="/assets/images/user-1.png"
@@ -262,7 +288,6 @@ function Header(props) {
           />
         </IconButton>
         <Popover
-          id={id}
           open={accountMenuOpen}
           anchorEl={anchorEl}
           onClose={handleAccountMenuClose}
@@ -275,7 +300,7 @@ function Header(props) {
             horizontal: 'right',
           }}
         >
-          <List component="nav" aria-labelledby="nested-list-subheader">
+          <List component="nav">
             {accountMenuItems.map((item, index) => {
               return (
                 <ListItem
@@ -286,7 +311,7 @@ function Header(props) {
                     handleAccountMenuClose();
                   }}
                 >
-                  <ListItemText primary={item.title} />
+                  <ListItemText>{item.title}</ListItemText>
                 </ListItem>
               );
             })}

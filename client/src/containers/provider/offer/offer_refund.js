@@ -4,6 +4,8 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import Radio from '@material-ui/core/Radio';
 import { Divider } from '@material-ui/core';
+import SendSuccess from './SendSuccess';
+import RequestSuccess from './RequestSuccess';
 
 const styles = (theme) => ({
     container: {
@@ -160,7 +162,12 @@ const styles = (theme) => ({
         marginTop: 30
     },
     btn_detail: {
-        display: 'flex'
+        display: 'flex',
+        marginTop: 10
+    },
+    btn_detail2: {
+        display: 'flex',
+        marginTop: -2
     },
     btn: {
         width: 200,
@@ -169,7 +176,73 @@ const styles = (theme) => ({
         borderColor: '#7c7c7c',
         borderRadius: 3,
         color: '#7c7c7c',
-        outline: 'none'
+        outline: 'none',
+        alignItems: 'start',
+        display: 'flex',
+        padding: 5
+    },
+    radio1: {
+        position: 'absolute',
+        marginLeft: 160,
+        marginTop: -5
+    },
+    textarea1: {
+        height: 16,
+        marginLeft: 20,
+        width: 165
+    },
+    textarea2: {
+        width: 195,
+        marginTop: 10
+    },
+    btns: {
+        display: 'flex',
+        marginTop: 30
+    },
+    back_btn: {
+        borderColor: '#299494',
+        color: '#299494',
+        width: 100,
+        height: 30,
+        borderRadius: 3,
+        outline: 'auto',
+        '&:hover': {
+            cursor: 'pointer'
+        }
+    },
+    send_btn: {
+        marginLeft: 15,
+        width: 100,
+        border: 'none',
+        backgroundColor: '#299494',
+        color: 'white',
+        outline: 'none',
+        borderRadius: 3,
+        height: 30,
+        '&:hover': {
+            cursor: 'pointer'
+        }
+    },
+    request_btn: {
+        marginLeft: 15,
+        width: 110,
+        border: 'none',
+        backgroundColor: '#299494',
+        color: 'white',
+        outline: 'none',
+        borderRadius: 3,
+        height: 30,
+        '&:hover': {
+            cursor: 'pointer'
+        }
+    },
+    send_container: {
+        height: 500,
+        marginTop: 100,
+        width: 300,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        backgroundColor: 'white'
     }
 })
 
@@ -177,9 +250,20 @@ export class index extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            formState: 'final'
+            formState: 'final',
+            open:  false,
+            show: false
         }
     }
+
+    handleClose = () => {
+        this.setState({open: false})
+    }
+
+    CloseModal = () => {
+        this.setState({show: false})
+    }
+
     render() {
         const { classes } = this.props;
         const {formState} = this.state;
@@ -224,7 +308,100 @@ export class index extends Component {
                                 color='primary'
                                 name="radio-button-demo"
                                 inputProps={{ 'aria-label': 'A' }}
+                                className={classes.radio1}
                             />
+                        </div>
+                        <div className={classes.btn_detail2}>
+                            <button className={classes.btn}>Extra Services</button>
+                            <Radio
+                                onChange={this.handleChange}
+                                value="a"
+                                color='primary'
+                                name="radio-button-demo"
+                                inputProps={{ 'aria-label': 'A' }}
+                                className={classes.radio1}
+                            />
+                        </div>
+                        <div className={classes.btn_detail2}>
+                            <button className={classes.btn}>Other issues</button>
+                            <Radio
+                                onChange={this.handleChange}
+                                value="a"
+                                color='primary'
+                                name="radio-button-demo"
+                                inputProps={{ 'aria-label': 'A' }}
+                                className={classes.radio1}
+                            />
+                        </div>
+                        <Typography className={classes.reason}>Amount</Typography>
+                        <div className={classes.btn_detail}>
+                            <Typography>$</Typography>
+                            <textarea className={classes.textarea1} rows=''></textarea>
+                        </div>
+                        <Typography className={classes.reason}>Message</Typography>
+                        <textarea className={classes.textarea2} rows='5'></textarea>
+                        <div className={classes.btns}>
+                            <button className={classes.back_btn} onClick={()=>this.setState({formState: "final"})}>Back</button>
+                            <button className={classes.send_btn} onClick={()=>this.setState({open: true})}>Send Money</button>
+                        </div>
+                    </div>
+                )}
+                {formState === 'request' && (
+                    <div>
+                        <Typography className={classes.header}>Send Money</Typography>
+                        <div className={classes.detail}>
+                            <img src={'/assets/images/refund.png'} alt='' className={classes.image}/>
+                            <div className={classes.image_detail}>
+                                <Typography className={classes.darion}>Darion</Typography>
+                                <Typography>Brochet</Typography>
+                                <Typography>Apr 03-Apr 05</Typography>
+                            </div>
+                        </div>
+                        <Typography className={classes.reason}>Select a reason</Typography>
+                        <div className={classes.btn_detail}>
+                            <button className={classes.btn}>Damaged or missing items</button>
+                            <Radio
+                                onChange={this.handleChange}
+                                value="a"
+                                checked='true'
+                                color='primary'
+                                name="radio-button-demo"
+                                inputProps={{ 'aria-label': 'A' }}
+                                className={classes.radio1}
+                            />
+                        </div>
+                        <div className={classes.btn_detail2}>
+                            <button className={classes.btn}>Extra Services</button>
+                            <Radio
+                                onChange={this.handleChange}
+                                value="a"
+                                color='primary'
+                                name="radio-button-demo"
+                                inputProps={{ 'aria-label': 'A' }}
+                                className={classes.radio1}
+                            />
+                        </div>
+                        <div className={classes.btn_detail2}>
+                            <button className={classes.btn}>Other issues</button>
+                            <Radio
+                                onChange={this.handleChange}
+                                value="a"
+                                color='primary'
+                                name="radio-button-demo"
+                                inputProps={{ 'aria-label': 'A' }}
+                                className={classes.radio1}
+                            />
+                        </div>
+                        <Typography className={classes.reason}>Amount</Typography>
+                        <div className={classes.btn_detail}>
+                            <Typography>$</Typography>
+                            <textarea className={classes.textarea1} rows=''></textarea>
+                        </div>
+                        <Typography className={classes.reason}>Message</Typography>
+                        <textarea className={classes.textarea2} rows='5'></textarea>
+                        <div className={classes.btns}>
+                            <button className={classes.back_btn} onClick={()=>this.setState({formState: "final"})}>Back</button>
+                            <button className={classes.request_btn} onClick={()=>this.setState({show: true})}>Request Money</button>
                         </div>
                     </div>
                 )}
@@ -282,6 +459,14 @@ export class index extends Component {
                     </div>
                 )}
                 </Grid>
+                <SendSuccess
+                    open={this.state.open}
+                    handleClose={this.handleClose}
+                />
+                <RequestSuccess
+                    open={this.state.show}
+                    handleClose={this.CloseModal}
+                />
             </div>
         )
     }

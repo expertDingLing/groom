@@ -16,6 +16,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import AuthContainer from '../../../components/generic/AuthContainer';
+import $ from 'jquery';
 
 const useStyles = makeStyles((theme) => ({
   closeButton: {
@@ -120,7 +121,14 @@ function Login(props) {
           variant="contained"
           color="primary"
           className={classes.loginButton}
-          onClick={() => history.push('/provider/home')}
+          onClick={() => {
+            if ($('#email').val() === 'provider'){
+              history.push('/provider/home');
+            }
+            else if($('#email').val() === 'customer'){
+              history.push('/customer/home')
+            }
+          }}
         >
           Login
         </Button>

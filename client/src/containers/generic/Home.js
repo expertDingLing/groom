@@ -36,23 +36,19 @@ const useStyles = makeStyles((theme) => ({
   },
   searchButton: {
     width: '15%',
-    background: theme.palette.primary.main,
-    '&:hover': {
-      background: theme.palette.primary.light,
-    },
-    color: 'white',
-    fontSize: 16,
+    fontSize: 'medium',
   },
   container: {
-    marginTop: 40,
+    marginTop: theme.spacing(2.5),
+    marginBottom: theme.spacing(2.5),
   },
   titleBar: {
     display: 'flex',
     justifyContent: 'space-between',
-    paddingBottom: 20,
+    paddingBottom: theme.spacing(2.5),
   },
   viewAll: {
-    paddingTop: 10,
+    paddingTop: theme.spacing(1.25),
   },
 }));
 
@@ -142,7 +138,7 @@ function Home() {
             color="secondary"
             disableUnderline
           />
-          <Button variant="contained" className={classes.searchButton}>
+          <Button variant="contained" color="primary" className={classes.searchButton}>
             Search
           </Button>
         </Box>
