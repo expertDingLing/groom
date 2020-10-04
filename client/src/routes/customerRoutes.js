@@ -18,7 +18,13 @@ import CreatingFav from '../containers/customer/favorites/creating_fav';
 import CustomerBooking from '../containers/customer/booking/customer_booking';
 import Complaint from '../containers/customer/messages/complaint';
 import BookingApproval from '../containers/customer/booking/booking_approval';
+import BookingRequest from '../containers/customer/booking/booking_request';
 import WaitList from '../containers/customer/waitList';
+import Dispute from '../containers/customer/dispute';
+import ShopDetails from '../containers/customer/shopDetails';
+import ServiceDetails from '../containers/customer/serviceDetails';
+import Overview from '../containers/customer/booking/overview';
+import Help from '../containers/customer/help';
 
 const routes = [
     { path: '/customer/home', name: 'Home', component: Home },
@@ -41,8 +47,13 @@ const routes = [
     { path: '/customer/customer_booking', name: 'CustomerBooking', component: CustomerBooking },
     { path: '/customer/complaint', name: 'Complaint', component: Complaint },
     { path: '/customer/booking_approval', name: 'BookingApproval', component: BookingApproval },
+    { path: '/customer/booking_request', name: 'BookingRequest', component: BookingRequest },
     { path: '/customer/wait-list', name: 'WaitList', component: WaitList },
-
+    { path: '/customer/dispute', name: 'Dispute', component: Dispute },
+    { path: '/customer/shop-details', name: 'ShopDetails', component: ShopDetails },
+    { path: '/customer/service-details', name: 'ServiceDetails', component: ServiceDetails },
+    { path: '/customer/overview', name: 'Overview', component: Overview },
+    { path: '/customer/help', name: 'Help', component: Help },
 ];
 
 export default routes;

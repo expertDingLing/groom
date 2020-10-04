@@ -12,7 +12,6 @@ import BookingHistory from '../containers/provider/bookingHistory';
 import Refer from '../containers/provider/refer';
 import Profile from '../containers/provider/profile';
 import GiftCard from '../containers/provider/gift';
-import Switch from '../containers/provider/switch';
 import Creating from '../containers/provider/shop/creating_shop';
 import Manage from '../containers/provider/shop/manage';
 import Owner from '../containers/provider/shop/owner';
@@ -50,7 +49,6 @@ const routes = [
     { path: '/provider/refer', name: 'Refer', component: Refer },
     { path: '/provider/profile', name: 'Profile', component: Profile },
     { path: '/provider/gift', name: 'GiftCard', component: GiftCard },
-    { path: '/provider/switch', name: 'Switch', component: Switch },
     { path: '/provider/creating_shop', name: 'Creating', component: Creating },
     { path: '/provider/manage', name: 'Manage', component: Manage },
     { path: '/provider/owner', name: 'Owner', component: Owner },

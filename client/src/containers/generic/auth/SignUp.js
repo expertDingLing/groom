@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   Box,
@@ -15,6 +14,7 @@ import {
 import CloseIcon from '@material-ui/icons/Close';
 import PhoneNumberInput from '../../../components/generic/PhoneNumberInput';
 import AuthContainer from '../../../components/generic/AuthContainer';
+import { TabPanel, a11yProps } from '../../../components/generic/TabPanel';
 
 const useStyles = makeStyles((theme) => ({
   closeButton: {
@@ -86,35 +86,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`tabpanel-${index}`}
-      aria-labelledby={`tab-${index}`}
-      {...other}
-    >
-      {value === index && <Box>{children}</Box>}
-    </div>
-  );
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired,
-};
-
-function a11yProps(index) {
-  return {
-    id: `tab-${index}`,
-    'aria-controls': `tabpanel-${index}`,
-  };
-}
 
 function SignUp(props) {
   const { history } = props;

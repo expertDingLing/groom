@@ -97,6 +97,12 @@ function Header(props) {
       isAuth: true,
       subItems: [
         {
+          title: 'Overview',
+          icon: faUsers,
+          isAuth: true,
+          onClick: () => history.push('/customer/overview'),
+        },
+        {
           title: 'Change Booking',
           icon: faUsers,
           isAuth: true,
@@ -131,6 +137,12 @@ function Header(props) {
           icon: faUsers,
           isAuth: true,
           onClick: () => history.push('/customer/booking_approval'),
+        },
+        {
+          title: 'Booking Request',
+          icon: faUsers,
+          isAuth: true,
+          onClick: () => history.push('/customer/booking_request'),
         },
       ],
     },
@@ -191,11 +203,37 @@ function Header(props) {
       ],
     },
     {
-      title: 'Wait List',
+      title: 'Other',
       icon: faUsers,
       isAuth: true,
-      onClick: () => history.push('/customer/wait-list'),
+      subItems: [
+        {
+          title: 'Wait List',
+          icon: faUsers,
+          isAuth: true,
+          onClick: () => history.push('/customer/wait-list'),
+        },
+        {
+            title: 'Dispute',
+            icon: faUsers,
+            isAuth: true,
+            onClick: () => history.push('/customer/dispute'),
+        },
+        {
+            title: 'Shop Details',
+            icon: faUsers,
+            isAuth: true,
+            onClick: () => history.push('/customer/shop-details'),
+        },
+        {
+          title: 'Service Details',
+          icon: faUsers,
+          isAuth: true,
+          onClick: () => history.push('/customer/service-details'),
+      },
+      ],
     },
+    
   ];
 
   const accountMenuItems = [
@@ -221,7 +259,7 @@ function Header(props) {
     },
     {
       title: 'Switch to Provider',
-      url: '/customer/switch',
+      url: '/provider/home',
     },
     {
       title: 'Help',

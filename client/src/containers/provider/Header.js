@@ -139,6 +139,12 @@ function Header(props) {
           isAuth: true,
           onClick: () => history.push('/provider/donation'),
         },
+        {
+          title: 'Email',
+          icon: faUsers,
+          isAuth: true,
+          onClick: () => history.push('/provider/email'),
+        },
       ],
     },
     {
@@ -264,7 +270,7 @@ function Header(props) {
     },
     {
       title: 'Switch to Customer',
-      url: '/provider/switch',
+      url: '/customer/home',
     },
     {
       title: 'Help',
